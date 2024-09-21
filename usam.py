@@ -9,6 +9,7 @@ import torch
 import torch.nn as nn
 from collections import defaultdict
 
+
 class USAM(torch.optim.Optimizer):
     def __init__(self, base_optimizer, rho=0.05, adaptive=False, stable=False):
         # NOTE super().__init__() not called on purpose
