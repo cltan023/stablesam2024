@@ -3,11 +3,11 @@ Stablizing sharpness-aware training with a renormalization strategy
 
 Usage:
 ```
-from sam import SAM
+from usam import USAM
 
 # define a base optimizer as in standard training  
 base_optimizer = torch.optim.SGD(net.parameters(), lr=0.05)
-optimizer = SAM(base_optimizer, rho=0.05, stable=True, adaptive=False)
+optimizer = USAM(base_optimizer, rho=0.05, stable=True, adaptive=False)
 
 for i in range(num_epochs):
     for data, target in train_dataloader:
